@@ -74,7 +74,7 @@
             $db = Database::connect();
             if($isImageUpdated)
             {
-                $statement = $db->prepare("UPDATE items set name = ?, description = ?, price = ?, category = ?, image = ?, WHERE id = ?");
+                $statement = $db->prepare("UPDATE items set name = ?, description = ?, price = ?, category = ?, image = ? WHERE id = ?");
                 $statement ->execute(array($name,$description,$price,$category,$image,$id));
             }
             else
